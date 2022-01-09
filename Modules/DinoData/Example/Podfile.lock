@@ -1,0 +1,16 @@
+PODS:
+  - DinoData (0.1.0)
+
+DEPENDENCIES:
+  - DinoData (from `../`)
+
+EXTERNAL SOURCES:
+  DinoData:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DinoData: fe91c570172e498ea45ab3854db843c70c3711bb
+
+PODFILE CHECKSUM: 473c7c8e612d186cc2315a6d730bd9f4fedd0c74
+
+COCOAPODS: 1.11.2

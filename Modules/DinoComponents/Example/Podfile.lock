@@ -1,0 +1,16 @@
+PODS:
+  - DinoComponents (0.1.0)
+
+DEPENDENCIES:
+  - DinoComponents (from `../`)
+
+EXTERNAL SOURCES:
+  DinoComponents:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DinoComponents: 97022a7cc5318fa4762acc4d37bd576ee7f95023
+
+PODFILE CHECKSUM: ccba3b64f299fc4044da5c994c8c83bc0dc24b1c
+
+COCOAPODS: 1.10.2

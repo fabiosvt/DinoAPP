@@ -1,0 +1,16 @@
+PODS:
+  - CustomTableView (0.1.0)
+
+DEPENDENCIES:
+  - CustomTableView (from `../`)
+
+EXTERNAL SOURCES:
+  CustomTableView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CustomTableView: e13ee0f738123918f715175725df0d0864fd7a84
+
+PODFILE CHECKSUM: ad8be224c5633538ea7557d1933a7f84fb76aa7a
+
+COCOAPODS: 1.11.2

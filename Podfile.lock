@@ -1,0 +1,28 @@
+PODS:
+  - CustomTableView (0.1.0):
+    - DinoComponents (~> 0.1.0)
+    - DinoData (~> 0.1.0)
+  - DinoComponents (0.1.0)
+  - DinoData (0.1.0)
+
+DEPENDENCIES:
+  - CustomTableView (from `Modules/CustomTableView`)
+  - DinoComponents (from `Modules/DinoComponents`)
+  - DinoData (from `Modules/DinoData`)
+
+EXTERNAL SOURCES:
+  CustomTableView:
+    :path: Modules/CustomTableView
+  DinoComponents:
+    :path: Modules/DinoComponents
+  DinoData:
+    :path: Modules/DinoData
+
+SPEC CHECKSUMS:
+  CustomTableView: 8d46125798dbf725c210947ea799edb1ab03ba8e
+  DinoComponents: 8b4bc60beeb10a90a636a3b3acc6459b7921206f
+  DinoData: 68db24473c23b31ad2b44f90615b8f16f34c28b2
+
+PODFILE CHECKSUM: 4dfbe52e51448b229237fcfc246b5466c6299f80
+
+COCOAPODS: 1.10.2

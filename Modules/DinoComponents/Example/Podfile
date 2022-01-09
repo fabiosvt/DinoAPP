@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'DinoComponents_Example' do
+  pod 'DinoComponents', :path => '../'
+
+  target 'DinoComponents_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
