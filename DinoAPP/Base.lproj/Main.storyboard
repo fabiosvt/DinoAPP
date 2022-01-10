@@ -33,9 +33,8 @@
                                     <action selector="didPressOpenView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5w0-en-IUc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDu-GK-Qje">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDu-GK-Qje">
                                 <rect key="frame" x="283" y="44" width="111" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Open TableView">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
@@ -75,6 +74,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7ud-Ot-eJ5" secondAttribute="bottom" constant="30" id="2vd-CQ-n41"/>
+                            <constraint firstItem="RDu-GK-Qje" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SY8-jL-Ois"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RDu-GK-Qje" secondAttribute="trailing" constant="20" id="Spn-Hb-MXV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eDw-mp-oW6" secondAttribute="bottom" constant="20" id="ech-BV-yaa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7ud-Ot-eJ5" secondAttribute="trailing" constant="20" id="hSa-Fg-q5j"/>
                             <constraint firstItem="eDw-mp-oW6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t8n-kT-6r5"/>

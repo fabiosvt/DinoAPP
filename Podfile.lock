@@ -19,9 +19,9 @@ EXTERNAL SOURCES:
     :path: Modules/DinoData
 
 SPEC CHECKSUMS:
-  CustomTableView: 8d46125798dbf725c210947ea799edb1ab03ba8e
-  DinoComponents: 8b4bc60beeb10a90a636a3b3acc6459b7921206f
-  DinoData: 68db24473c23b31ad2b44f90615b8f16f34c28b2
+  CustomTableView: 5174dc73ffa9e4b6bc7af4febdc6ddaf6eb4bdb0
+  DinoComponents: 97022a7cc5318fa4762acc4d37bd576ee7f95023
+  DinoData: 1fc551c1785aea900b861069582817810d968da0
 
 PODFILE CHECKSUM: 4dfbe52e51448b229237fcfc246b5466c6299f80
 
