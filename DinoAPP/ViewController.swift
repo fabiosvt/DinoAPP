@@ -20,7 +20,23 @@ class ViewController: UIViewController {
         let logger = Logger()
         logger.log(message: "viewDidLoad called", type: LoggingType.info)
         
-        profileImage.image = UIImage(named: "dinoClearLogo")
+        guard let backgroundUrl = URL(string: "https://vps.rup.com.br/DinoAPP/Assets/dinoBack.jpg") else { return }
+        DispatchQueue.main.async() {
+            self.downloadImage(from: backgroundUrl) { image in
+                let backgroundImageView = UIImageView(image: image)
+                backgroundImageView.frame = self.view.frame
+                backgroundImageView.contentMode = .scaleToFill
+                self.view.addSubview(backgroundImageView)
+                self.view.sendSubviewToBack(backgroundImageView)
+            }
+        }
+        
+        guard let imageUrl = URL(string: "https://vps.rup.com.br/DinoAPP/Assets/dinoLogo.png") else { return }
+        DispatchQueue.main.async() {
+            self.downloadImage(from: imageUrl) { image in
+                self.profileImage.image = image
+            }
+        }
     }
 
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
