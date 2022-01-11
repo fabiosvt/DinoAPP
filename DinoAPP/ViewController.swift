@@ -9,6 +9,7 @@ import UIKit
 import DinoData
 import DinoComponents
 import CustomTableView
+import CollectionTableView
 
 class ViewController: UIViewController {
 
@@ -110,6 +111,22 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func didPressOpenCollectionView(_ sender: Any) {
+        let selfBundle = Bundle(for: CollectionTableView.self)
+        let storyboard = UIStoryboard(name: "CollectionTableView", bundle: selfBundle)
+        let customVC = storyboard.instantiateViewController(identifier: "CollectionTableView") as CollectionTableView
+        self.present(customVC, animated: true, completion: nil)
+        populateData() { array in
+            // always update the UI from the main thread
+            DispatchQueue.main.async() { [weak self] in
+                //customVC.data = array
+                customVC.tableView.reloadData()
+            }
+        }
+    }
+
+
     
     @IBAction func didPressOpenTableView(_ sender: Any) {
         let selfBundle = Bundle(for: CustomTableViewController.self)

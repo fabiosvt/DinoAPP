@@ -1,4 +1,7 @@
 PODS:
+  - CollectionTableView (0.1.0):
+    - DinoComponents (~> 0.1.0)
+    - DinoData (~> 0.1.0)
   - CustomTableView (0.1.0):
     - DinoComponents (~> 0.1.0)
     - DinoData (~> 0.1.0)
@@ -6,11 +9,14 @@ PODS:
   - DinoData (0.1.0)
 
 DEPENDENCIES:
+  - CollectionTableView (from `Modules/CollectionTableView`)
   - CustomTableView (from `Modules/CustomTableView`)
   - DinoComponents (from `Modules/DinoComponents`)
   - DinoData (from `Modules/DinoData`)
 
 EXTERNAL SOURCES:
+  CollectionTableView:
+    :path: Modules/CollectionTableView
   CustomTableView:
     :path: Modules/CustomTableView
   DinoComponents:
@@ -19,10 +25,11 @@ EXTERNAL SOURCES:
     :path: Modules/DinoData
 
 SPEC CHECKSUMS:
+  CollectionTableView: a1ad3d241139539269bcb6926e32aeda547fde77
   CustomTableView: 5174dc73ffa9e4b6bc7af4febdc6ddaf6eb4bdb0
   DinoComponents: 97022a7cc5318fa4762acc4d37bd576ee7f95023
   DinoData: 1fc551c1785aea900b861069582817810d968da0
 
-PODFILE CHECKSUM: 4dfbe52e51448b229237fcfc246b5466c6299f80
+PODFILE CHECKSUM: 90471378548fcc05f30c95e693792d05c2a35f57
 
 COCOAPODS: 1.10.2

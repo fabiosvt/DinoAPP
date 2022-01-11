@@ -12,5 +12,6 @@ target 'DinoAPP' do
   pod 'DinoData', :path => 'Modules/DinoData'
   pod 'DinoComponents', :path => 'Modules/DinoComponents'
   pod 'CustomTableView', :path => 'Modules/CustomTableView'
+  pod 'CollectionTableView', :path => 'Modules/CollectionTableView'
 
 end
