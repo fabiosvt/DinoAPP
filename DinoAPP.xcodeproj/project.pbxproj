@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		187C85CF9384B270B101225F /* Pods_DinoAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640318FA467E621B33CD38D7 /* Pods_DinoAPP.framework */; };
 		554A3E4F2702B30D00ECA635 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A3E4E2702B30D00ECA635 /* AppDelegate.swift */; };
 		554A3E512702B30D00ECA635 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A3E502702B30D00ECA635 /* SceneDelegate.swift */; };
 		554A3E562702B30D00ECA635 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 554A3E542702B30D00ECA635 /* Main.storyboard */; };
@@ -16,6 +15,8 @@
 		554A3E712702B31300ECA635 /* DinoAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A3E702702B31300ECA635 /* DinoAPPUITests.swift */; };
 		554A3ECA2702B3D400ECA635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554A3EC42702B3D400ECA635 /* Assets.xcassets */; };
 		555340AF27038FB600A608F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555340AE27038FB600A608F6 /* ViewController.swift */; };
+		6158CFA9E1DA95C9AB479FCA /* Pods_DinoAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D470E7507FDA1F4FAD752A82 /* Pods_DinoAPP.framework */; };
+		E5A02A4A278E5B080079BF3E /* QuotesJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A02A49278E5B080079BF3E /* QuotesJsonModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		49B25AF2477A42E2F5563E01 /* Pods-DinoAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinoAPP.release.xcconfig"; path = "Target Support Files/Pods-DinoAPP/Pods-DinoAPP.release.xcconfig"; sourceTree = "<group>"; };
+		270C748274FBF3AC996DDAC9 /* Pods-DinoAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinoAPP.release.xcconfig"; path = "Target Support Files/Pods-DinoAPP/Pods-DinoAPP.release.xcconfig"; sourceTree = "<group>"; };
+		414BC760340DA673B480D8B6 /* Pods-DinoAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinoAPP.debug.xcconfig"; path = "Target Support Files/Pods-DinoAPP/Pods-DinoAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		554A3E4B2702B30D00ECA635 /* DinoAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinoAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		554A3E4E2702B30D00ECA635 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		554A3E502702B30D00ECA635 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,8 +55,8 @@
 		554A3EED2702B73000ECA635 /* DinoAppCoreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DinoAppCoreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5553408027033B7700A608F6 /* DinoData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DinoData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		555340AE27038FB600A608F6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		640318FA467E621B33CD38D7 /* Pods_DinoAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DinoAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E630754267DAD99DFEC4C498 /* Pods-DinoAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinoAPP.debug.xcconfig"; path = "Target Support Files/Pods-DinoAPP/Pods-DinoAPP.debug.xcconfig"; sourceTree = "<group>"; };
+		D470E7507FDA1F4FAD752A82 /* Pods_DinoAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DinoAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5A02A49278E5B080079BF3E /* QuotesJsonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesJsonModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				187C85CF9384B270B101225F /* Pods_DinoAPP.framework in Frameworks */,
+				6158CFA9E1DA95C9AB479FCA /* Pods_DinoAPP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +110,7 @@
 		554A3E4D2702B30D00ECA635 /* DinoAPP */ = {
 			isa = PBXGroup;
 			children = (
+				E5A02A46278E5ACC0079BF3E /* Model */,
 				554A3EC42702B3D400ECA635 /* Assets.xcassets */,
 				554A3E4E2702B30D00ECA635 /* AppDelegate.swift */,
 				554A3E502702B30D00ECA635 /* SceneDelegate.swift */,
@@ -142,7 +145,7 @@
 			children = (
 				554A3EED2702B73000ECA635 /* DinoAppCoreSDK.framework */,
 				5553408027033B7700A608F6 /* DinoData.framework */,
-				640318FA467E621B33CD38D7 /* Pods_DinoAPP.framework */,
+				D470E7507FDA1F4FAD752A82 /* Pods_DinoAPP.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,10 +153,18 @@
 		7927C058EDE38FC590D8D677 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E630754267DAD99DFEC4C498 /* Pods-DinoAPP.debug.xcconfig */,
-				49B25AF2477A42E2F5563E01 /* Pods-DinoAPP.release.xcconfig */,
+				414BC760340DA673B480D8B6 /* Pods-DinoAPP.debug.xcconfig */,
+				270C748274FBF3AC996DDAC9 /* Pods-DinoAPP.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E5A02A46278E5ACC0079BF3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5A02A49278E5B080079BF3E /* QuotesJsonModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,11 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 554A3E752702B31300ECA635 /* Build configuration list for PBXNativeTarget "DinoAPP" */;
 			buildPhases = (
-				2F65062507E44F25865E07C2 /* [CP] Check Pods Manifest.lock */,
+				2BE79DEC8D922D860496FE2D /* [CP] Check Pods Manifest.lock */,
 				554A3E472702B30D00ECA635 /* Sources */,
 				554A3E482702B30D00ECA635 /* Frameworks */,
 				554A3E492702B30D00ECA635 /* Resources */,
-				FDB0C14C66E36DACBED933E6 /* [CP] Embed Pods Frameworks */,
+				8AD5B23AB93CF2038C8BB25F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,7 +295,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2F65062507E44F25865E07C2 /* [CP] Check Pods Manifest.lock */ = {
+		2BE79DEC8D922D860496FE2D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -306,7 +317,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FDB0C14C66E36DACBED933E6 /* [CP] Embed Pods Frameworks */ = {
+		8AD5B23AB93CF2038C8BB25F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -330,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5A02A4A278E5B080079BF3E /* QuotesJsonModel.swift in Sources */,
 				555340AF27038FB600A608F6 /* ViewController.swift in Sources */,
 				554A3E4F2702B30D00ECA635 /* AppDelegate.swift in Sources */,
 				554A3E512702B30D00ECA635 /* SceneDelegate.swift in Sources */,
@@ -505,7 +517,7 @@
 		};
 		554A3E762702B31300ECA635 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E630754267DAD99DFEC4C498 /* Pods-DinoAPP.debug.xcconfig */;
+			baseConfigurationReference = 414BC760340DA673B480D8B6 /* Pods-DinoAPP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -524,7 +536,7 @@
 		};
 		554A3E772702B31300ECA635 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49B25AF2477A42E2F5563E01 /* Pods-DinoAPP.release.xcconfig */;
+			baseConfigurationReference = 270C748274FBF3AC996DDAC9 /* Pods-DinoAPP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
