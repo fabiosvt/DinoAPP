@@ -18,6 +18,27 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>EnvironmentConfig</key>
+	<dict>
+		<key>REMOTE_CERTIFICATE_PINNING_ENABLED</key>
+		<string>$(REMOTE_CERTIFICATE_PINNING_ENABLED)</string>
+		<key>REMOTE_CONFIG_CERTIFICATE</key>
+		<string>$(REMOTE_CONFIG_CERTIFICATE)</string>
+		<key>REMOTE_CONFIG_CERTIFICATE_HASH</key>
+		<string>$(REMOTE_CONFIG_CERTIFICATE_HASH)</string>
+		<key>REMOTE_CONFIG_EXT</key>
+		<string>$(REMOTE_CONFIG_EXT)</string>
+		<key>REMOTE_CONFIG_FILE</key>
+		<string>$(REMOTE_CONFIG_FILE)</string>
+		<key>REMOTE_CONFIG_HOST</key>
+		<string>$(REMOTE_CONFIG_HOST)</string>
+		<key>REMOTE_CONFIG_URL</key>
+		<string>$(REMOTE_CONFIG_URL)</string>
+		<key>REMOTE_HOST</key>
+		<string>$(REMOTE_HOST)</string>
+		<key>REMOTE_URL</key>
+		<string>$(REMOTE_URL)</string>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>

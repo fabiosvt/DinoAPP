@@ -42,7 +42,10 @@ public class DinoData {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let sessionConfig = URLSessionConfiguration.ephemeral
+        let sessionDelegate = CertificatePinning()
+        let backgroundSession = URLSession(configuration: sessionConfig, delegate: sessionDelegate, delegateQueue: nil)
+        let task = backgroundSession.dataTask(with: url) { (data, response, error) in
             guard let jsonData = data else {
                 completion(.failure(DataError.invalidData))
                 return
@@ -77,6 +80,9 @@ public class DinoData {
             return
         }
         
+        let sessionConfig = URLSessionConfiguration.ephemeral
+        let sessionDelegate = CertificatePinning()
+        let backgroundSession = URLSession(configuration: sessionConfig, delegate: sessionDelegate, delegateQueue: nil)
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let jsonData = data else {
                 completion(dataParsed)
