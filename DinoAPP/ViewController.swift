@@ -15,13 +15,15 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var profileImage: ProfileView!
     
+    let configProvider = ConfigProvider(localConfigLoader: LocalConfigLoader(), remoteConfigLoader: RemoteConfigLoader())
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let logger = Logger()
         logger.log(message: "viewDidLoad called", type: LoggingType.info)
         
-        guard let backgroundUrl = URL(string: "https://vps.rup.com.br/DinoAPP/Assets/dinoBack.jpg") else { return }
+        guard let backgroundUrl = URL(string: EnvironmentUtil.remoteURL + "/DinoAPP/dinoBack.jpg") else { return }
         DispatchQueue.main.async() {
             self.downloadImage(from: backgroundUrl) { image in
                 let backgroundImageView = UIImageView(image: image)
@@ -32,7 +34,7 @@ class ViewController: UIViewController {
             }
         }
         
-        guard let imageUrl = URL(string: "https://vps.rup.com.br/DinoAPP/Assets/dinoLogo.png") else { return }
+        guard let imageUrl = URL(string: EnvironmentUtil.remoteURL + "DinoAPP/dinoLogo.png") else { return }
         DispatchQueue.main.async() {
             self.downloadImage(from: imageUrl) { image in
                 self.profileImage.image = image
@@ -41,7 +43,10 @@ class ViewController: UIViewController {
     }
 
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+        let sessionConfig = URLSessionConfiguration.ephemeral
+        let sessionDelegate = CertificatePinning()
+        let backgroundSession = URLSession(configuration: sessionConfig, delegate: sessionDelegate, delegateQueue: nil)
+        backgroundSession.dataTask(with: url, completionHandler: completion).resume()
     }
     
     func downloadImage(from url: URL, completion: @escaping (UIImage) -> Void) {
@@ -61,7 +66,7 @@ class ViewController: UIViewController {
 
     @IBAction func didTapOnButton(_ sender: Any) {
         let data = DinoData()
-        let jsonUrl = "https://vps.rup.com.br/DinoAPP/Resources/Dinosaurs_quotes.json"
+        let jsonUrl = EnvironmentUtil.remoteURL + "getQuotes"
         data.readDinoJSON(of: QuotesJsonModel.self, url: jsonUrl) { result in
             switch result {
             case let .failure(error):
@@ -73,7 +78,7 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             case let .success(dinos):
                 if let randomDino = dinos.randomElement() {
-                    guard let imageUrl = URL(string: "https://vps.rup.com.br/DinoAPP/Resources/\(randomDino.getImage())") else { return }
+                    guard let imageUrl = URL(string: EnvironmentUtil.remoteURL + "/DinoAPP/Resources/\(randomDino.getImage())") else { return }
                     DispatchQueue.main.async() {
                         let alertView = RFAlertView(frame: self.view.bounds)
                         self.downloadImage(from: imageUrl) { image in
@@ -89,7 +94,7 @@ class ViewController: UIViewController {
     
     func populateData(completion: @escaping ([QuotesModel]) -> Void) {
         let data = DinoData()
-        let jsonUrl = "https://vps.rup.com.br/DinoAPP/Resources/Dinosaurs_quotes.json"
+        let jsonUrl = EnvironmentUtil.remoteConfigURL + "Dinosaurs_quotes.json"
         data.readDinoJSON(of: QuotesJsonModel.self, url: jsonUrl) { result in
             switch result {
             case let .failure(error):
@@ -102,7 +107,7 @@ class ViewController: UIViewController {
             case let .success(dinos):
                 var tableData = [QuotesModel]()
                 for dino in dinos {
-                    guard let imageUrl = URL(string: "https://vps.rup.com.br/DinoAPP/Resources/\(dino.getImage())") else { return }
+                    guard let imageUrl = URL(string: EnvironmentUtil.remoteURL + "/DinoAPP/Resources/\(dino.getImage())") else { return }
                     self.downloadImage(from: imageUrl) { image in
                         tableData.append(QuotesModel(quote: dino.getQuote(), author: dino.getAuthor(), image: image))
                         completion(tableData)
@@ -144,7 +149,7 @@ class ViewController: UIViewController {
 
     @IBAction func didPressOpenView(_ sender: Any) {
         let data = DinoData()
-        let jsonUrl = "https://vps.rup.com.br/DinoAPP/Resources/LoremIpsum.json"
+        let jsonUrl = EnvironmentUtil.remoteConfigURL + "LoremIpsum.json"
         data.readLoremIpsum(url: jsonUrl) { result in
             DispatchQueue.main.async() {
                 let customVC = CustomViewController()
@@ -154,5 +159,9 @@ class ViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configProvider.updateConfig()
+    }
 }
 
