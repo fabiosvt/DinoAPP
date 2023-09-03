@@ -11,7 +11,9 @@
 		554A3F502702BD1E00ECA635 /* DinoDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A3F4F2702BD1E00ECA635 /* DinoDataTests.swift */; };
 		554A3F522702BD1E00ECA635 /* DinoData.h in Headers */ = {isa = PBXBuildFile; fileRef = 554A3F442702BD1E00ECA635 /* DinoData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		554A3F652702BDB700ECA635 /* DinoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A3F642702BDB700ECA635 /* DinoData.swift */; };
-		554A3F6A2702BED600ECA635 /* QuotesJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A3F692702BED600ECA635 /* QuotesJsonModel.swift */; };
+		E5B59F002AA4B05E00B8918F /* CertificatePinning.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B59EFF2AA4B05E00B8918F /* CertificatePinning.swift */; };
+		E5B59F022AA4B09800B8918F /* Fabios-Mac-mini.local.der in Resources */ = {isa = PBXBuildFile; fileRef = E5B59F012AA4B09800B8918F /* Fabios-Mac-mini.local.der */; };
+		E5B59F042AA4B0AD00B8918F /* EnvironmentUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B59F032AA4B0AD00B8918F /* EnvironmentUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,9 @@
 		554A3F4F2702BD1E00ECA635 /* DinoDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoDataTests.swift; sourceTree = "<group>"; };
 		554A3F512702BD1E00ECA635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		554A3F642702BDB700ECA635 /* DinoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoData.swift; sourceTree = "<group>"; };
-		554A3F692702BED600ECA635 /* QuotesJsonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesJsonModel.swift; sourceTree = "<group>"; };
+		E5B59EFF2AA4B05E00B8918F /* CertificatePinning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatePinning.swift; sourceTree = "<group>"; };
+		E5B59F012AA4B09800B8918F /* Fabios-Mac-mini.local.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fabios-Mac-mini.local.der"; sourceTree = "<group>"; };
+		E5B59F032AA4B0AD00B8918F /* EnvironmentUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +79,12 @@
 		554A3F432702BD1E00ECA635 /* DinoData */ = {
 			isa = PBXGroup;
 			children = (
-				554A3F682702BEC900ECA635 /* Model */,
+				E5B59F012AA4B09800B8918F /* Fabios-Mac-mini.local.der */,
 				554A3F442702BD1E00ECA635 /* DinoData.h */,
 				554A3F642702BDB700ECA635 /* DinoData.swift */,
 				554A3F452702BD1E00ECA635 /* Info.plist */,
+				E5B59EFF2AA4B05E00B8918F /* CertificatePinning.swift */,
+				E5B59F032AA4B0AD00B8918F /* EnvironmentUtil.swift */,
 			);
 			path = DinoData;
 			sourceTree = "<group>";
@@ -90,14 +96,6 @@
 				554A3F512702BD1E00ECA635 /* Info.plist */,
 			);
 			path = DinoDataTests;
-			sourceTree = "<group>";
-		};
-		554A3F682702BEC900ECA635 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				554A3F692702BED600ECA635 /* QuotesJsonModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B59F022AA4B09800B8918F /* Fabios-Mac-mini.local.der in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,8 +208,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				554A3F6A2702BED600ECA635 /* QuotesJsonModel.swift in Sources */,
 				554A3F652702BDB700ECA635 /* DinoData.swift in Sources */,
+				E5B59F042AA4B0AD00B8918F /* EnvironmentUtil.swift in Sources */,
+				E5B59F002AA4B05E00B8918F /* CertificatePinning.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +366,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DinoData/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +374,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sendman.DinoData;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				REMOTE_CERTIFICATE_PINNING_ENABLED = YES;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -391,6 +393,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DinoData/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,6 +401,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sendman.DinoData;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				REMOTE_CERTIFICATE_PINNING_ENABLED = YES;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
