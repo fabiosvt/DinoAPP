@@ -46,27 +46,38 @@ public class DinoData {
         let sessionDelegate = CertificatePinning()
         let backgroundSession = URLSession(configuration: sessionConfig, delegate: sessionDelegate, delegateQueue: nil)
         let task = backgroundSession.dataTask(with: url) { (data, response, error) in
-            guard let jsonData = data else {
-                completion(.failure(DataError.invalidData))
-                return
-            }
             
             do {
+                guard let jsonData = data else {
+                    completion(.failure(DataError.invalidData))
+                    return
+                }
                 let decodedData: [T] = try JSONDecoder().decode([T].self, from: jsonData)
                 completion(.success(decodedData))
+                return
+            } catch DecodingError.dataCorrupted(let context) {
+                debugPrint(context)
+            } catch DecodingError.keyNotFound(let key, let context) {
+                debugPrint("Key '\(key)' not found:", context.debugDescription)
+                debugPrint("codingPath:", context.codingPath)
+            } catch DecodingError.valueNotFound(let value, let context) {
+                debugPrint("Value '\(value)' not found:", context.debugDescription)
+                debugPrint("codingPath:", context.codingPath)
+            } catch DecodingError.typeMismatch(let type, let context) {
+                debugPrint("Type '\(type)' mismatch:", context.debugDescription)
+                debugPrint("codingPath:", context.codingPath)
+            } catch {
+                debugPrint("error: ", error)
             }
-            catch {
-                completion(.failure(DataError.decodingError))
-            }
+            completion(.failure(DataError.decodingError))
             
         }
         task.resume()
     }
     
     public func readLoremIpsum(url: String, completion: @escaping (_ result: Array<String>) -> Void) {
-        var dataParsed = Array<String>()
         guard var components = URLComponents(string: url) else {
-            completion(dataParsed)
+            completion([])
             return
         }
         
@@ -76,22 +87,38 @@ public class DinoData {
         ]
         
         guard let url = components.url else {
-            completion(dataParsed)
+            completion([])
             return
         }
         
         let sessionConfig = URLSessionConfiguration.ephemeral
         let sessionDelegate = CertificatePinning()
         let backgroundSession = URLSession(configuration: sessionConfig, delegate: sessionDelegate, delegateQueue: nil)
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let jsonData = data else {
+        let task = backgroundSession.dataTask(with: url) { (data, response, error) in
+            do {
+                guard let jsonData = data else {
+                    completion([])
+                    return
+                }
+                let dataParsed = try JSONDecoder().decode([String].self, from: jsonData)
                 completion(dataParsed)
                 return
+            } catch DecodingError.dataCorrupted(let context) {
+                debugPrint(context)
+            } catch DecodingError.keyNotFound(let key, let context) {
+                debugPrint("Key '\(key)' not found:", context.debugDescription)
+                debugPrint("codingPath:", context.codingPath)
+            } catch DecodingError.valueNotFound(let value, let context) {
+                debugPrint("Value '\(value)' not found:", context.debugDescription)
+                debugPrint("codingPath:", context.codingPath)
+            } catch DecodingError.typeMismatch(let type, let context) {
+                debugPrint("Type '\(type)' mismatch:", context.debugDescription)
+                debugPrint("codingPath:", context.codingPath)
+            } catch {
+                debugPrint("error: ", error)
             }
-            
-            dataParsed = try! JSONDecoder().decode([String].self, from: jsonData)
-            completion(dataParsed)
-            
+            completion([])
+
         }
         task.resume()
     }

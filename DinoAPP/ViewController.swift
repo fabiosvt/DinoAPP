@@ -94,7 +94,7 @@ class ViewController: UIViewController {
     
     func populateData(completion: @escaping ([QuotesModel]) -> Void) {
         let data = DinoData()
-        let jsonUrl = EnvironmentUtil.remoteConfigURL + "Dinosaurs_quotes.json"
+        let jsonUrl = EnvironmentUtil.remoteURL + "getQuotes"
         data.readDinoJSON(of: QuotesJsonModel.self, url: jsonUrl) { result in
             switch result {
             case let .failure(error):
@@ -107,7 +107,7 @@ class ViewController: UIViewController {
             case let .success(dinos):
                 var tableData = [QuotesModel]()
                 for dino in dinos {
-                    guard let imageUrl = URL(string: EnvironmentUtil.remoteURL + "/DinoAPP/Resources/\(dino.getImage())") else { return }
+                    guard let imageUrl = URL(string: EnvironmentUtil.remoteURL + "DinoAPP/Resources/\(dino.getImage())") else { return }
                     self.downloadImage(from: imageUrl) { image in
                         tableData.append(QuotesModel(quote: dino.getQuote(), author: dino.getAuthor(), image: image))
                         completion(tableData)
@@ -149,7 +149,7 @@ class ViewController: UIViewController {
 
     @IBAction func didPressOpenView(_ sender: Any) {
         let data = DinoData()
-        let jsonUrl = EnvironmentUtil.remoteConfigURL + "LoremIpsum.json"
+        let jsonUrl = EnvironmentUtil.remoteURL + "getLoremIpsum"
         data.readLoremIpsum(url: jsonUrl) { result in
             DispatchQueue.main.async() {
                 let customVC = CustomViewController()
