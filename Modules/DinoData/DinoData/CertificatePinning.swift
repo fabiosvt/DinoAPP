@@ -58,9 +58,9 @@ class CertificatePinning:NSObject, URLSessionDelegate {
                 }
                 if let localCertiData = NSData(contentsOfFile: pathToCertificate), let rootCert = SecCertificateCreateWithData(kCFAllocatorDefault, localCertiData) {
                     let sslInput = addAnchorToTrust(trust: serverTrust, certificate: rootCert)
-                    var result: SecTrustResultType = SecTrustResultType.unspecified
-                    let error: OSStatus = SecTrustEvaluate(sslInput, &result)
-                    if (error != 0){
+                    //evaluate server certifiacte
+                    let error = SecTrustEvaluateWithError(sslInput, nil)
+                    if (error) {
                         completionHandler(URLSession.AuthChallengeDisposition.cancelAuthenticationChallenge, nil)
                         return
                     }

@@ -34,7 +34,8 @@ public class DinoData {
 
         components.queryItems = [
             URLQueryItem(name: "api_key", value: "DEMO_KEY"),
-            URLQueryItem(name: "date", value: dateString)
+            URLQueryItem(name: "date", value: dateString),
+            URLQueryItem(name: "interval", value: "\(interval)")
         ]
         
         guard let url = components.url else {

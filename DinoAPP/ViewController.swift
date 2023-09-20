@@ -56,7 +56,7 @@ class ViewController: UIViewController {
             print(response?.suggestedFilename ?? url.lastPathComponent)
             print("Download Finished")
             // always update the UI from the main thread
-            DispatchQueue.main.async() { [weak self] in
+            DispatchQueue.main.async() {
                 if let image = UIImage(data: data) {
                     completion(image)
                 }
@@ -124,7 +124,7 @@ class ViewController: UIViewController {
         self.present(customVC, animated: true, completion: nil)
         populateData() { array in
             // always update the UI from the main thread
-            DispatchQueue.main.async() { [weak self] in
+            DispatchQueue.main.async() {
                 //customVC.data = array
                 customVC.tableView.reloadData()
             }
@@ -140,7 +140,7 @@ class ViewController: UIViewController {
         self.present(customVC, animated: true, completion: nil)
         populateData() { array in
             // always update the UI from the main thread
-            DispatchQueue.main.async() { [weak self] in
+            DispatchQueue.main.async() {
                 customVC.data = array
                 customVC.tableView.reloadData()
             }

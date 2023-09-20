@@ -40,12 +40,14 @@ public struct defaultOptions: Codable {
 
 public struct Response: Codable {
     let minVersion: String
+    let configVersion: Int
     let configurations: configurations
     let defaultOptions: defaultOptions
     let hardCodedPublicKey: [publicKey]
 
-    init (minVersion: String, configurations: configurations, defaultOptions: defaultOptions, hardCodedPublicKey: [publicKey]) {
+    init (minVersion: String, configVersion: Int, configurations: configurations, defaultOptions: defaultOptions, hardCodedPublicKey: [publicKey]) {
         self.minVersion = minVersion
+        self.configVersion = configVersion
         self.configurations = configurations
         self.defaultOptions = defaultOptions
         self.hardCodedPublicKey = hardCodedPublicKey

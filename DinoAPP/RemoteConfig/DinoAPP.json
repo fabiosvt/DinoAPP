@@ -1,5 +1,6 @@
 {
     "minVersion": "1.0",
+    "configVersion": 2023091001,
     "configurations" : {
         "app_name": "mTLS client",
         "app_link": "https://www.rup.com.br/DinoApp"
