@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		555340AF27038FB600A608F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555340AE27038FB600A608F6 /* ViewController.swift */; };
 		6158CFA9E1DA95C9AB479FCA /* Pods_DinoAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D470E7507FDA1F4FAD752A82 /* Pods_DinoAPP.framework */; };
 		E5A02A4A278E5B080079BF3E /* QuotesJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A02A49278E5B080079BF3E /* QuotesJsonModel.swift */; };
+		E5AB34F72AC0709C0072464B /* server.der in Resources */ = {isa = PBXBuildFile; fileRef = E5AB34F62AC0709C0072464B /* server.der */; };
 		E5B59EFC2AA4AC2500B8918F /* EnvironmentUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B59EFB2AA4AC2400B8918F /* EnvironmentUtil.swift */; };
 		E5B59EFE2AA4ADD300B8918F /* CertificatePinning.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B59EFD2AA4ADD300B8918F /* CertificatePinning.swift */; };
 		E5B59F0E2AA4DE6C00B8918F /* RemoteConfigLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B59F072AA4DE6C00B8918F /* RemoteConfigLoader.swift */; };
@@ -24,7 +25,6 @@
 		E5B59F102AA4DE6C00B8918F /* DinoAPP.json in Resources */ = {isa = PBXBuildFile; fileRef = E5B59F092AA4DE6C00B8918F /* DinoAPP.json */; };
 		E5B59F112AA4DE6C00B8918F /* LocalConfigLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B59F0A2AA4DE6C00B8918F /* LocalConfigLoader.swift */; };
 		E5B59F122AA4DE6C00B8918F /* ConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B59F0B2AA4DE6C00B8918F /* ConfigProvider.swift */; };
-		E5B59F132AA4DE6C00B8918F /* Fabios-Mac-mini.local.der in Resources */ = {isa = PBXBuildFile; fileRef = E5B59F0C2AA4DE6C00B8918F /* Fabios-Mac-mini.local.der */; };
 		E5B59F142AA4DE6C00B8918F /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B59F0D2AA4DE6C00B8918F /* AppConfig.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +66,7 @@
 		555340AE27038FB600A608F6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D470E7507FDA1F4FAD752A82 /* Pods_DinoAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DinoAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A02A49278E5B080079BF3E /* QuotesJsonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesJsonModel.swift; sourceTree = "<group>"; };
+		E5AB34F62AC0709C0072464B /* server.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = server.der; sourceTree = "<group>"; };
 		E5B59EFB2AA4AC2400B8918F /* EnvironmentUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentUtil.swift; sourceTree = "<group>"; };
 		E5B59EFD2AA4ADD300B8918F /* CertificatePinning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatePinning.swift; sourceTree = "<group>"; };
 		E5B59F072AA4DE6C00B8918F /* RemoteConfigLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteConfigLoader.swift; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		E5B59F092AA4DE6C00B8918F /* DinoAPP.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DinoAPP.json; sourceTree = "<group>"; };
 		E5B59F0A2AA4DE6C00B8918F /* LocalConfigLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalConfigLoader.swift; sourceTree = "<group>"; };
 		E5B59F0B2AA4DE6C00B8918F /* ConfigProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigProvider.swift; sourceTree = "<group>"; };
-		E5B59F0C2AA4DE6C00B8918F /* Fabios-Mac-mini.local.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fabios-Mac-mini.local.der"; sourceTree = "<group>"; };
 		E5B59F0D2AA4DE6C00B8918F /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,7 +196,7 @@
 				E5B59F092AA4DE6C00B8918F /* DinoAPP.json */,
 				E5B59F0A2AA4DE6C00B8918F /* LocalConfigLoader.swift */,
 				E5B59F0B2AA4DE6C00B8918F /* ConfigProvider.swift */,
-				E5B59F0C2AA4DE6C00B8918F /* Fabios-Mac-mini.local.der */,
+				E5AB34F62AC0709C0072464B /* server.der */,
 				E5B59F0D2AA4DE6C00B8918F /* AppConfig.swift */,
 			);
 			path = RemoteConfig;
@@ -308,9 +308,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5B59F102AA4DE6C00B8918F /* DinoAPP.json in Resources */,
-				E5B59F132AA4DE6C00B8918F /* Fabios-Mac-mini.local.der in Resources */,
 				554A3E5B2702B31300ECA635 /* LaunchScreen.storyboard in Resources */,
 				554A3ECA2702B3D400ECA635 /* Assets.xcassets in Resources */,
+				E5AB34F72AC0709C0072464B /* server.der in Resources */,
 				554A3E562702B30D00ECA635 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,7 +498,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				REMOTE_CONFIG_CERTIFICATE = "Fabios-Mac-mini.local";
+				REMOTE_CONFIG_CERTIFICATE = server;
 				REMOTE_CONFIG_CERTIFICATE_HASH = "zBquHAK6jI9VSPrfiGmronwaF8ZOrNSPWY/lAryFq/U=";
 				REMOTE_CONFIG_EXT = json;
 				REMOTE_CONFIG_FILE = DinoAPP;
@@ -560,7 +560,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				REMOTE_CONFIG_CERTIFICATE = "Fabios-Mac-mini.local";
+				REMOTE_CONFIG_CERTIFICATE = server;
 				REMOTE_CONFIG_CERTIFICATE_HASH = "zBquHAK6jI9VSPrfiGmronwaF8ZOrNSPWY/lAryFq/U=";
 				REMOTE_CONFIG_EXT = json;
 				REMOTE_CONFIG_FILE = DinoAPP;
