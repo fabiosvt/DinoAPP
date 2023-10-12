@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         let logger = Logger()
         logger.log(message: "viewDidLoad called", type: LoggingType.info)
         
-        guard let backgroundUrl = URL(string: EnvironmentUtil.remoteURL + "/DinoAPP/dinoBack.jpg") else { return }
+        guard let backgroundUrl = URL(string: EnvironmentUtil.remoteURL + "DinoAPP/dinoBack.jpg") else { return }
         DispatchQueue.main.async() {
             self.downloadImage(from: backgroundUrl) { image in
                 let backgroundImageView = UIImageView(image: image)
